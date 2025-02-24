@@ -1,0 +1,32 @@
+plugins {
+    id 'base'
+}
+
+version = '1.0.0'
+ext {
+    pythonVersion = "3.11"
+    venvPath = "venv"
+}
+
+task setUp(type: Exec) {
+    if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+        commandLine 'C:\\Program Files\\Git\\bin\\bash.exe', '-c', './scripts/setup.sh'
+    } else {
+        commandLine 'bash', '-c', './scripts/setup.sh' // Run in Unix/Linux
+    }
+}
+
+task cleanVenv(type: Delete) {
+    delete venvPath
+}
+
+// task runFastAPI(type: Exec) {
+//     // commandLine "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"
+//     if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+//         commandLine 'C:\\Program Files\\Git\\bin\\bash.exe', '-c', './scripts/runAPI.sh'
+//     } else {
+//         commandLine 'bash', '-c', './scripts/runAPI.sh' // Run in Unix/Linux
+//     }
+// }
+
+build.dependsOn setUp

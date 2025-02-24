@@ -1,0 +1,122 @@
+/* Chatbot toggle icon */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0084ff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-toggle img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Chat window container with fixed height */
+.chatbot-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  /* Fixed height */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat window body with scrolling enabled */
+.chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Chat window container */
+.chatbot-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header for chat window */
+.chatbot-header {
+  background: #0084ff;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chat window body */
+.chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Chat messages */
+.chat-message {
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.chat-message.user {
+  background: #e1f5fe;
+  text-align: right;
+}
+
+.chat-message.bot {
+  background: #f1f1f1;
+  text-align: left;
+}
+
+/* Chat input and send button */
+.chatbot-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+}
+
+.chatbot-send {
+  background: #0084ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+
+/* Close button for chat window */
+.chatbot-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}

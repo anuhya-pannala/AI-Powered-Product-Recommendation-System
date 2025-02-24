@@ -1,0 +1,16 @@
+ipykernel
+langchain
+langchain-community
+python-dotenv
+fastapi
+uvicorn
+# sqlite3
+pandas
+numpy
+scikit-learn
+langchain-openai
+langchain-ollama
+langchain-groq
+faiss-cpu
+chromadb
+langchain-chroma
